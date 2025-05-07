@@ -20,3 +20,11 @@ from hardware
 where tag is not null
 group by tag
 order by qwe desc;
+-- 6.
+-- 7.
+-- 8.
+insert into hardware(title,price,amount,tag)
+values ('Ноутбук Lenovo 2BXKQ7E9XD',54500,1,new);
+-- 9.
+delete from hardware
+where title = 'Очки PS VR 2';
