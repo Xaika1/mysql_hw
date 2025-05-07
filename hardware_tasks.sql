@@ -21,7 +21,15 @@ where tag is not null
 group by tag
 order by qwe desc;
 -- 6.
+select count(*) as qwe
+from hardware
+where tag = 'discount';
 -- 7.
+select title,price
+from hardware
+where tag = 'new'
+order by price desc
+LIMIT 1;
 -- 8.
 insert into hardware(title,price,amount,tag)
 values ('Ноутбук Lenovo 2BXKQ7E9XD',54500,1,new);
