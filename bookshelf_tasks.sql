@@ -55,17 +55,13 @@ where shelves.title like '%верхняя%' or shelves.title like '%нижняя
 
 -- 8. 
 select id into @friend_id from friends where name like "Иванов Иван";
-
 select books.id into @book_id from books
 join authors_books on books.id = authors_books.books_id
 join authors on authors_books.authors_id = authors.id
 where title like "Божественная комедия" and authors.name like "Данте Алигьери";
-
 update books 
 set friends_id = @friend_id
 where id = @book_id;
-
-
 select * from books 
 join authors_books on books.id = authors_books.books_id
 join authors on authors_books.authors_id = authors.id
